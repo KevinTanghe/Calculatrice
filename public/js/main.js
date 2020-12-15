@@ -75,7 +75,7 @@ buttonExo2.addEventListener("click", function(){
 let inputExo3 = div[10].querySelectorAll("input")
 let buttonExo3 = div[10].querySelectorAll("button")
 let spanExo3 = div[10].querySelectorAll("span");
-console.log(buttonExo3);
+
 
 let value1Exo3;
 let value2Exo3;
@@ -125,4 +125,67 @@ buttonExo3[0].addEventListener("click", function(){
     }
     spanExo3[1].innerHTML = valueReponse3
 
+})
+
+
+let inputExo4 = div[13].querySelectorAll("input");
+let buttonExo4 = div[13].querySelectorAll("button");
+let spanExo4 = div[13].querySelectorAll("span");
+console.log(buttonExo4);
+
+let value1Exo4;
+let value2Exo4;
+let valueOperatorExo4 = "";
+let valueReponse4;
+
+for (let i = 1; i < 11; i++) {
+    buttonExo4[i].addEventListener("click", function(){
+        if (valueOperatorExo4 == "") {
+            inputExo4[0].value += Number(this.innerHTML)
+            value1Exo4 = Number(inputExo4[0].value)
+        } else {
+            inputExo4[1].value += Number(this.innerHTML)
+            value2Exo4 = Number(inputExo4[1].value)
+        }
+    })
+    
+};
+
+
+buttonExo4[11].addEventListener("click", function(){
+    valueOperatorExo4 = "+";
+    console.log(valueOperatorExo4);
+})
+
+buttonExo4[12].addEventListener("click", function(){
+    valueOperatorExo4 = "-";
+})
+
+buttonExo4[13].addEventListener("click", function(){
+    valueOperatorExo4 = "*";
+})
+
+buttonExo4[14].addEventListener("click", function(){
+    valueOperatorExo4 = "/";
+})
+
+buttonExo4[0].addEventListener("click", function(){
+    switch (valueOperatorExo4) {
+        case "+":
+            valueReponse4 = value1Exo4 + value2Exo4;
+            break;
+        case "-":
+            valueReponse4 = value1Exo4 - value2Exo4;
+            break;
+        case "*":
+            valueReponse4 = value1Exo4 * value2Exo4;
+            break;
+        case "/":
+            valueReponse4 = value1Exo4 / value2Exo4;
+        default:
+            break;
+    }
+    spanExo4[1].innerHTML = valueReponse4
+    inputExo4[0].value = ""
+    inputExo4[1].value = ""
 })
