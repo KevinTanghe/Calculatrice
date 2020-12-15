@@ -35,7 +35,7 @@ let spanExo2 = div[7].querySelector("span");
 let value1Exo2;
 let value2Exo2;
 let valueOperatorExo2;
-let valueRepose2;
+let valueReponse2;
 
 
 inputExo2[0].addEventListener("change", function(){
@@ -53,22 +53,76 @@ inputExo2[1].addEventListener("change", function(){
 buttonExo2.addEventListener("click", function(){
     switch (valueOperatorExo2) {
         case "+":
-            valueRepose2 = value1Exo2 + value2Exo2;
+            valueReponse2 = value1Exo2 + value2Exo2;
             break;
         case "-":
-            valueRepose2 = value1Exo2 - value2Exo2;
+            valueReponse2 = value1Exo2 - value2Exo2;
             break
         case "*":
-            valueRepose2 = value1Exo2 * value2Exo2;
+            valueReponse2 = value1Exo2 * value2Exo2;
             break
         case "/":
-            valueRepose2 = value1Exo2 / value2Exo2;
+            valueReponse2 = value1Exo2 / value2Exo2;
             break
         default:
             break;
     }
-    spanExo2.innerHTML = valueRepose2
+    spanExo2.innerHTML = valueReponse2
 
 })
 
 
+let inputExo3 = div[10].querySelectorAll("input")
+let buttonExo3 = div[10].querySelectorAll("button")
+let spanExo3 = div[10].querySelectorAll("span");
+console.log(buttonExo3);
+
+let value1Exo3;
+let value2Exo3;
+let valueOperatorExo3;
+let valueReponse3;
+
+
+inputExo3[0].addEventListener("change", function(){
+    value1Exo3 = Number(this.value);
+})
+
+inputExo3[1].addEventListener("change", function(){
+    value2Exo3 = Number(this.value);
+})
+
+buttonExo3[1].addEventListener("click", function(){
+    valueOperatorExo3 = "+";
+})
+
+buttonExo3[2].addEventListener("click", function(){
+    valueOperatorExo3 = "-";
+})
+
+buttonExo3[3].addEventListener("click", function(){
+    valueOperatorExo3 = "*";
+})
+
+buttonExo3[4].addEventListener("click", function(){
+    valueOperatorExo3 = "/";
+})
+
+buttonExo3[0].addEventListener("click", function(){
+    switch (valueOperatorExo3) {
+        case "+":
+            valueReponse3 = value1Exo3 + value2Exo3;
+            break;
+        case "-":
+            valueReponse3 = value1Exo3 - value2Exo3;
+            break;
+        case "*":
+            valueReponse3 = value1Exo3 * value2Exo3;
+            break;
+        case "/":
+            valueReponse3 = value1Exo3 / value2Exo3;
+        default:
+            break;
+    }
+    spanExo3[1].innerHTML = valueReponse3
+
+})
